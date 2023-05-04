@@ -3,7 +3,7 @@ const length = document.getElementById('meter-feet');
 const volume = document.getElementById('liters-gallons');
 const mass = document.getElementById('kg-pounds');
 
-let inputValue;
+let inputValue = 0;
 
 const lengthHandler = () => {
 	const feet = Number((inputValue * 3.2808).toFixed(3));
@@ -27,6 +27,10 @@ convertBtnEl.addEventListener(
 	'click',
 	(convertValues = () => {
 		inputValue = document.getElementById('input-value').value;
+		if (inputValue === '') {
+			inputValue = 0;
+		}
+
 		lengthHandler(inputValue);
 		volumeHandler(inputValue);
 		massHandler(inputValue);
