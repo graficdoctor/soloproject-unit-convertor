@@ -1,0 +1,132 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* Variables */
+:root {
+	/* light mode */
+	--primary-100: #f4f4f4;
+	--primary-400: #ccc1ff;
+	--primary-500: #b295ff;
+	--primary-600: #5a537b;
+
+	--accent-900: #6943ff;
+	--dark-text: #353535;
+
+	/* rest of colors */
+	--black: #1c1c1c;
+	--white: #fff;
+}
+
+/* General Styles */
+html {
+	background-color: var(--black);
+}
+
+body {
+	font-size: 0.875rem;
+	font-family: 'Inter', sans-serif;
+	color: var(--white);
+	text-align: center;
+	display: grid;
+	place-items: center;
+	height: 100vh;
+}
+
+/* Typography */
+.bold {
+	font-weight: 800;
+}
+
+.input-title {
+	font-size: 1.75rem;
+}
+
+.input-number {
+	font-size: 3.625rem;
+	border: 2px solid var(--primary-500);
+	border-radius: 5px;
+	padding: 0.15em 0.3em;
+	display: inline-block;
+	margin: 0.5em;
+	width: 117px;
+	background-color: var(--accent-900);
+	color: var(--white);
+  text-align: center;
+}
+
+/* hide the arrows */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+	appearance: textfield;
+}
+
+.output-title {
+	color: var(--primary-600);
+	font-weight: 600;
+	font-size: 1.25rem;
+	margin-bottom: 0.5em;
+}
+
+.generate-output {
+	color: var(--dark-text);
+}
+
+/* General Classes */
+
+.container {
+	width: 90%;
+	max-width: 550px;
+}
+
+.input-container {
+	background-color: var(--accent-900);
+	padding: 2.125rem;
+}
+
+.output-containers {
+	background-color: var(--primary-100);
+	padding: 1.8em 1.25em;
+}
+
+.output-container {
+	background-color: var(--white);
+	padding: 1.5em 0;
+	margin: 1.2em;
+}
+
+/* Button */
+.btn {
+	display: block;
+	margin: 0 auto;
+	background-color: var(--white);
+	border: transparent;
+	font-family: inherit;
+	font-weight: 500;
+	color: var(--dark-text);
+	padding: 0.8em 2.45em;
+	border-radius: 5px;
+	transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+	background-color: var(--primary-500);
+	color: var(--white);
+	box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+		0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.btn:active {
+	color: var(--accent-900);
+	background-color: var(--primary-100);
+	box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+		0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
